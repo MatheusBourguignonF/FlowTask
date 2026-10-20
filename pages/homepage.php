@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaskMaster - Organizador de Tarefas</title>
+    <title>FlowTask - Organizador de Tarefas</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* Reset básico */
@@ -160,7 +160,7 @@
 <body>
 
 <header>
-    <h1>TaskMaster</h1>
+    <h1>FlowTask</h1>
     <nav>
         <button onclick="window.location.href='login.php'">Login</button>
         <button onclick="window.location.href='register.php'">Registrar</button>
@@ -169,7 +169,7 @@
 
 <section class="hero">
     <h2>Organize suas tarefas de forma simples e eficiente</h2>
-    <p>TaskMaster é o seu novo aliado na organização diária. Adicione, remova e acompanhe suas tarefas de maneira intuitiva e divertida.</p>
+    <p>FlowTask é o seu novo aliado na organização diária. Adicione, remova e acompanhe suas tarefas de maneira intuitiva e divertida.</p>
     <button onclick="window.location.href='register.php'">Começar Agora</button>
 </section>
 
@@ -189,7 +189,7 @@
 </section>
 
 <footer>
-    &copy; 2025 TaskMaster. Todos os direitos reservados.
+    &copy; 2025 FlowTask. Todos os direitos reservados.
 </footer>
 
 </body>

@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaskMaster - Registro</title>
+    <title>FlowTask - Registro</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         .register-container input {
-            width: 100%;
+            width: 80%;
             padding: 12px 15px;
             margin-bottom: 20px;
             border: none;
@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         .register-container button {
-            width: 100%;
+            width: 40%;
             padding: 15px;
             border: none;
             border-radius: 25px;
@@ -132,7 +132,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="password" name="password" placeholder="Senha" required>
         <button type="submit">Login</button>
     </form>
-    <p>Não tem uma conta? <a href="index.html">Faça registro</a></p>
+    <p>Não tem uma conta? <a href="register.php">Faça registro</a></p>
 </div>
 </form>
 

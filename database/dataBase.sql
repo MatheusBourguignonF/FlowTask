@@ -1,0 +1,23 @@
+CREATE DATABASE IF NOT EXISTS flowtask;
+
+USE flowtask;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(150) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS tasks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    task_text VARCHAR(255) NOT NULL,
+    day_index TINYINT NOT NULL,
+    hour TINYINT NOT NULL,
+
+    CONSTRAINT fk_tasks_users
+        FOREIGN KEY (user_id)
+        REFERENCES users(id)
+        ON DELETE CASCADE
+);
