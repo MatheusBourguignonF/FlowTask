@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db   = "flowtask";
+$db   = "taskmaster";
 
 $conn = new mysqli($host, $user, $pass, $db);
 

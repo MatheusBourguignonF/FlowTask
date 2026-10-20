@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('connection.php');
+require_once __DIR__ . '/../config/connection.php';
 
 $erro = "";
 
@@ -130,14 +130,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form method="POST" action="login.php">
         <input type="email" name="email" placeholder="Email" required>
         <input type="password" name="password" placeholder="Senha" required>
+        <?php if ($erro != ""): ?>
+            <p style="color: yellow; font-weight: bold; margin-top: 10px;">
+                <?= $erro ?>
+            </p>
+        <?php endif; ?>
         <button type="submit">Login</button>
     </form>
     <p>Não tem uma conta? <a href="register.php">Faça registro</a></p>
 </div>
 </form>
 
-<?php if ($erro != ""): ?>
-    <p style="color: yellow; font-weight: bold; margin-top: 10px;">
-        <?= $erro ?>
-    </p>
-<?php endif; ?>
+

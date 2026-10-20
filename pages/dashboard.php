@@ -217,7 +217,7 @@ async function addTask() {
     form.append("day", day);
     form.append("hour", hour);
 
-    const res = await fetch("save_task.php", { method: "POST", body: form });
+    const res = await fetch("../actions/save_task.php", { method: "POST", body: form });
     const json = await res.json();
 
     if (json.success) {
@@ -246,12 +246,12 @@ async function loadTasks() {
     // rebuild table (limpa células e cria de novo)
     buildTable();
 
-    const res = await fetch("load_task.php");
+    const res = await fetch("../actions/load_task.php");
     let tasks = [];
     try {
         tasks = await res.json();
     } catch (e) {
-        console.error("Erro parse load_task:", e);
+        console.error("Erro parse ../actions/load_task:", e);
         return;
     }
 
@@ -273,7 +273,7 @@ async function loadTasks() {
     let formData = new FormData();
     formData.append("id", div.dataset.id);
 
-    const req = await fetch("delete_task.php", {
+    const req = await fetch("../actions/delete_task.php", {
         method: "POST",
         body: formData
     });
@@ -297,7 +297,7 @@ async function confirmDelete(id, element) {
     const form = new FormData();
     form.append("id", id);
 
-    const res = await fetch("delete_task.php", { method: "POST", body: form });
+    const res = await fetch("../actions/delete_task.php", { method: "POST", body: form });
     const json = await res.json();
 
     if (json.success) {
@@ -317,7 +317,7 @@ document.addEventListener("DOMContentLoaded", loadTasks);
 
 // (Se você tiver botão que chama addTask, garanta que chame addTask())
 function logout() {
-    window.location.href = "logout.php";
+    window.location.href = "../actions/logout.php";
 }
 </script>
 
